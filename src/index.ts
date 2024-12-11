@@ -1,5 +1,6 @@
 /* BUILDER PATTERN */
 
+import ConcreteCreator1 from './factory-method/concrete-creator1';
 import Circle from './prototype/circle';
 
 const main = () => {
@@ -37,15 +38,18 @@ const main = () => {
 
     // Prototype Pattern Example
     // Demonstrates creating a deep copy of an object using the clone method
-    const circle1 = new Circle(10);
-    const circle2 = circle1.clone();
+    // const circle1 = new Circle(10);
+    // const circle2 = circle1.clone();
     
-    // Verify that we have two distinct objects (not the same reference)
-    if (circle1 === circle2) {
-        console.log('Same object');
-    } else {
-        console.log('real clone of circle');
-    }
+    // // Verify that we have two distinct objects (not the same reference)
+    // if (circle1 === circle2) {
+    //     console.log('Same object');
+    // } else {
+    //     console.log('real clone of circle');
+    // }
+
+    const concreteCreator1 = new ConcreteCreator1();
+    const concreteProduct1 = concreteCreator1.factoryMethod();
 }
 
 // Create director instance for builder pattern (commented out)
