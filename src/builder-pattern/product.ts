@@ -1,11 +1,14 @@
+// Product class that represents the complex object being built
 class Product1 {
-    public parts : string[];
+    // Array to store the different parts of the product
+    public parts: string[];
 
-    constructor(){
+    constructor() {
         this.parts = [];
     }
 
-    public listParts() : void {
+    // Displays all parts that have been added to the product
+    public listParts(): void {
         console.log(`Product parts: ${this.parts.join('-')}`);
     }
 }
